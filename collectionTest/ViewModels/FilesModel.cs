@@ -20,7 +20,7 @@ namespace collectionTest.ViewModels
         {
             AllFiles = new ObservableCollection<ExtendedSftpItem>();
             var r = new Random();
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 50; i++)
             {
                 AllFiles.Add(new ExtendedSftpItem("File", "File" + i, r.Next(1000)));
             }
