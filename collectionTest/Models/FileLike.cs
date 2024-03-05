@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace collectionTest.Models
 {
-    internal class ExtendedSftpItem
+    internal class FileLike
     {
-        public string Glyph { get; set; }
+        public string Type { get; set; }
         public Item Item { get; set; }
 
-        public ExtendedSftpItem(string glyph, string name, int len)
+        public FileLike(string glyph, string name, int len)
         {
-            Glyph = glyph;
+            Type = glyph;
             Item = new Item { Name = name, Length = len };
         }
     }

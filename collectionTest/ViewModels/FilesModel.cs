@@ -11,18 +11,18 @@ namespace collectionTest.ViewModels
 {
     internal class FilesModel
     { 
-        public ObservableCollection<ExtendedSftpItem> AllFiles { get; set; }
+        public ObservableCollection<FileLike> AllFiles { get; set; }
         public SelectionMode SelectionMode = SelectionMode.Single;
-        public ObservableCollection<ExtendedSftpItem> SelectedItems = new ObservableCollection<ExtendedSftpItem>();
+        public ObservableCollection<FileLike> SelectedItems = new ObservableCollection<FileLike>();
         public string CurrentDirectory { get; set; }
 
         public FilesModel()
         {
-            AllFiles = new ObservableCollection<ExtendedSftpItem>();
+            AllFiles = new ObservableCollection<FileLike>();
             var r = new Random();
             for (int i = 0; i < 50; i++)
             {
-                AllFiles.Add(new ExtendedSftpItem("File", "File" + i, r.Next(1000)));
+                AllFiles.Add(new FileLike("File", "File" + i, r.Next(1000)));
             }
             CurrentDirectory = "/home/user";
         }
